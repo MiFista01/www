@@ -1,0 +1,130 @@
+.scroll_off{
+    overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1d1c2300;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2e2c35be;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3d48be;
+  }
+.back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -5;
+}
+@keyframes blackout {
+    0%{background-color: rgba(0, 0, 0, 1);}
+    35%{background-color: rgba(0, 0, 0, 0.2);}
+    75%{background-color: rgba(0, 0, 0, 1);}
+    100%{background-color: rgba(0, 0, 0, 1);}
+}
+
+.light{
+    background-image: url(../imgs/background/light1.png);
+    background-size: cover;
+    background-position: center;
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    top: -100%;
+    left: -100vw;
+}
+.front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/background/back.png);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    animation: blackout 5s infinite linear;
+}
+.options{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+}
+.options .anchors{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.options .anchors img{
+    width: 20%;
+    cursor: pointer
+}
+.options .colors{
+    background-color: rgb(11, 11, 11);
+    border: 3px solid rgb(29, 29, 29);
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 5px;
+}
+.options h4{
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+.color{
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+    margin: 1px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: rgb(16, 16, 16);
+    border: 1px solid rgb(6, 6, 6);
+    text-transform: uppercase;
+    flex-grow: 1;
+    transition-duration: 0.2s;
+}
+.color:hover{
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(15, 15, 15);
+}
+.options div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.options input{
+    color: whitesmoke;
+    background: none;
+    border: 1px solid rgb(6, 6, 6);
+    width: 15%;
+}
+.options input:hover{
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(15, 15, 15);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,554 @@
+{
+  "id": "a9bea9a7-645f-449a-bc0f-075067369be1",
+  "version": "2.0",
+  "name": "host",
+  "url": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+  "tests": [{
+    "id": "1ce139ea-412f-42b3-9584-af81abeb9ce0",
+    "name": "host_without_dates",
+    "commands": [{
+      "id": "faf4f774-067c-4ad8-8642-13c612f0b3ac",
+      "comment": "",
+      "command": "open",
+      "target": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88c928aa-f785-4c8e-a18e-af676d26e1e7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "496dc49d-b5c6-4bce-9495-bccac8032f3a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab1d98dc-1e58-492c-b842-857410d6a6bc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=header",
+      "targets": [
+        ["id=header", "id"],
+        ["css=#header", "css:finder"],
+        ["xpath=//div[@id='header']", "xpath:attributes"],
+        ["xpath=//div[@id='inner']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f35c7b9c-7618-436a-baab-75b55202d58f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=header",
+      "targets": [
+        ["id=header", "id"],
+        ["css=#header", "css:finder"],
+        ["xpath=//div[@id='header']", "xpath:attributes"],
+        ["xpath=//div[@id='inner']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "846c97af-cd59-4232-9774-82013e941488",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c310220c-e1d5-4a02-b46c-2227f373f07f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) input",
+      "targets": [
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@value='Войти']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd7a2ac0-329c-4946-a722-99ebdb561940",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f078383a-be3d-4657-b835-e2abcc37443c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": "Данные для логина неверны. Пожалуйста, попробуйте еще раз или восстановите пароль с помощью ссылки ниже."
+    }]
+  }, {
+    "id": "12d9e415-7ef1-4284-ae19-0f5db151eb81",
+    "name": "host_with_incorrect_login",
+    "commands": [{
+      "id": "7849940d-71d7-48a1-9b74-65c4dbc05658",
+      "comment": "",
+      "command": "open",
+      "target": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61dab36d-03d0-43d0-9948-4ba1b7dd5fb7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1401x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b65c06ea-3ccb-4ff7-9717-064ac33ddfc6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c24eb46-e0ad-498f-9e54-e63cba7981e7",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73845fee-60ed-4465-b9ff-d889c4abf0d7",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "ljudmilarogoleva"
+    }, {
+      "id": "9c590e00-c39f-42d5-bb3f-eaa017db703c",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) input",
+      "targets": [
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@value='Войти']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7e8efd7-c933-48bc-8514-6ed05d229797",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17565e17-8c2b-4b72-b55b-27447a5cea5c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": "Данные для логина неверны. Пожалуйста, попробуйте еще раз или восстановите пароль с помощью ссылки ниже."
+    }]
+  }, {
+    "id": "06cdf84e-8232-4ad4-9f59-9b6529b03052",
+    "name": "host_with_correct_login",
+    "commands": [{
+      "id": "ca9e20e5-2a0d-42eb-943c-c5d137aaad84",
+      "comment": "",
+      "command": "open",
+      "target": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc6db34a-74db-49c9-a321-1d09f59cc738",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1401x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15d90688-ebc2-49ba-9f17-9b0f74a1ef33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d8451bd-82b0-4eae-94a2-d618f7eabf65",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ecbe6f7-89db-45f1-a432-0ded75d4796d",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "aleksei22891@gmail.com"
+    }, {
+      "id": "9ceb29f1-3a63-409f-8bf8-e08be34bbac9",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) input",
+      "targets": [
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@value='Войти']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a92bdb7-02f8-4266-8a02-8c054760b07d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71a5a8b4-2761-4434-b983-ffa4222a3f33",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": "Данные для логина неверны. Пожалуйста, попробуйте еще раз или восстановите пароль с помощью ссылки ниже."
+    }]
+  }, {
+    "id": "b2b76112-c56d-444b-9c99-5a8f9e19ffee",
+    "name": "host_correct_login_incorrect_password",
+    "commands": [{
+      "id": "4f95ef61-4843-4371-8c40-82f3149852a9",
+      "comment": "",
+      "command": "open",
+      "target": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dd78f5b-d99f-4c93-9cef-8449c92569fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e14c1395-1f23-4837-90b7-229ef6689a7a",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70c7acb7-b7c7-4c18-88c2-1cab233973a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "aleksei22891@gmail.com"
+    }, {
+      "id": "1b00ec78-9e77-4ef8-b04a-c60d1a683829",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2940334c-28a6-4d9b-a05c-5a8abba6f8f0",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "hgjsfdhkgfs"
+    }, {
+      "id": "992b19ab-0245-4761-95a6-94d18bb691bc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "58832be8-6389-484a-bec6-57ced1f1a8b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "618b9ddd-ddec-4456-9cc3-227f66586a70",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.errorbox",
+      "targets": [
+        ["css=.errorbox", "css:finder"],
+        ["xpath=//form[@id='frmlogin']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": "Данные для логина неверны. Пожалуйста, попробуйте еще раз или восстановите пароль с помощью ссылки ниже."
+    }]
+  }, {
+    "id": "096a4fd6-a147-45e4-af67-0c7136f76bf1",
+    "name": "host_correct_login_password",
+    "commands": [{
+      "id": "d13a26a9-7fb4-4671-a476-ae575a98bd9b",
+      "comment": "",
+      "command": "open",
+      "target": "https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32db93dd-f156-43f1-95d8-8fbec0c1c82c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1281x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d178acb-40cf-4e9d-b26f-69cb551eb48a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Панель клиента",
+      "targets": [
+        ["linkText=Панель клиента", "linkText"],
+        ["css=.header-clients", "css:finder"],
+        ["xpath=//a[contains(text(),'Панель клиента')]", "xpath:link"],
+        ["xpath=//div[@id='mainmenu']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/clients/clientarea.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Панель клиента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ad9ebb-8c3b-4877-8ae5-0c334a6f76f9",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b931e70-0aa0-49d5-92ff-a1c1cb4071bb",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "aleksei22891@gmail.com"
+    }, {
+      "id": "2a8ff5c1-b78d-4715-b034-097f092f16b5",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67556e23-574d-4558-b527-b5ea3ec44c70",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Al2ek0s01"
+    }, {
+      "id": "420f6190-1d16-44ee-8a05-d03a15c956f8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frmlogin']/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2e14f79b-0b50-4fa9-a34f-bcc75023078f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#leftcontainer > p:nth-child(6)",
+      "targets": [
+        ["css=#leftcontainer > p:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='leftcontainer']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Добро пожаловать в Панель Управления Клиента. Здесь можно увидеть и обновить детали о Вас, которые мы храним, просмотреть информацию о Ваших хостинг планах и доменах, задать вопрос техподдержке или заказать дополнительные услуги')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2660ff07-1952-43f5-a7eb-74d28f185c78",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#leftcontainer > p:nth-child(6)",
+      "targets": [
+        ["css=#leftcontainer > p:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='leftcontainer']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Добро пожаловать в Панель Управления Клиента. Здесь можно увидеть и обновить детали о Вас, которые мы храним, просмотреть информацию о Ваших хостинг планах и доменах, задать вопрос техподдержке или заказать дополнительные услуги')]", "xpath:innerText"]
+      ],
+      "value": "Добро пожаловать в Панель Управления Клиента. Здесь можно увидеть и обновить детали о Вас, которые мы храним, просмотреть информацию о Ваших хостинг планах и доменах, задать вопрос техподдержке или заказать дополнительные услуги"
+    }]
+  }],
+  "suites": [{
+    "id": "1e2ddc29-e302-45ed-92e9-43dc3ba0776f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1ce139ea-412f-42b3-9584-af81abeb9ce0"]
+  }],
+  "urls": ["https://hostiq.ua/?gclid=EAIaIQobChMIqOPfhYq3-wIVVwWiAx0-QgjcEAAYASAAEgLilPD_BwE"],
+  "plugins": []
+}

@@ -1,0 +1,53 @@
+.left_aside{
+    color: black;
+    font-size: 20px;
+    position: sticky;
+    top: -0px;
+    left: 0px;
+    margin-top: -4vw;
+    width: 15%;
+    height: min-content;
+}
+.line1,.line2{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: start;
+    
+}
+.line2{
+    margin-left: 3.9vw;
+    height: 4.4vw;
+    overflow: visible;
+    display: flex;
+}
+.left_aside ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    margin-left: 7.2vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left_aside .conteiner{
+    width: 7.5vw;
+    height: 7.5vw;
+    min-width: 7.5vw;
+    min-height: 7.5vw;
+    margin-left: 0.3vw;
+}
+.left_aside .hex_border:hover{
+    min-height: 120%;
+    height: 120%;
+    width: 120%;
+    z-index: 2;
+}
+.left_aside  p{
+    font-size: 19px;
+    transition-duration: 0.5s;
+}
+.left_aside .hex_border:hover p{
+    font-size: 24px;
+}

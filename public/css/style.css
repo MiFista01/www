@@ -1,0 +1,514 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: rgb(19, 19, 19);
+    font-family: 'Righteous', cursive;
+    overflow:overlay;
+    overflow-x: hidden;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+header{
+    width: 68%;
+    background-color: rgb(8, 8, 8);
+    clip-path: polygon(0%0%,100%0%,100%70%,55%70%,50%100%,45%70%,0%70%);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    margin-bottom: 1vw;
+}
+header h1{
+    margin: 0;
+    font-size: 40px;
+    cursor: pointer;
+    padding-top: 3px;
+    width: 15%;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+header h2{
+    margin: 0px;
+    width: 12%;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    font-size: 25px;
+    padding-top: 10px;
+}
+header h1:hover,header h2:hover{
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    color: whitesmoke;
+}
+.line1, .line2{
+    width: 100%;
+}
+.imgs{
+    flex-wrap: wrap;
+}
+main{
+    width: 68%;
+    transform: perspective(0px) translate3d(0px, 0px, 0px);
+    transition-duration: 7s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conteiner .message{
+    position: absolute;
+    color: black;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 2;
+    display: none;
+    transition-duration: 0.5s;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.home, .about, .form, .skills, .studies, .ivkhk, .course, .subject, .add{
+    display: flex;
+    justify-content: space-between;
+    transition-duration: 1.5s;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.about .imgs{
+    width: 50%;
+}
+.form{
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.01);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.form h1{
+    margin: 0;
+}
+.form ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.form li{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form li .img{
+    width: 3vw;
+    display: flex;
+    justify-content: center;
+}
+.form .img{
+    width: 3vw;
+    margin-right: 1vw;
+}
+.form .img > img{
+    max-height: 3vw;
+    max-width: 100%;
+}
+.form p, .form a, .form h2{
+    margin: 0;
+    margin-top: 10px;
+}
+.form h2{
+    font-size: 20px !important;
+}
+.form p, .form a{
+    font-size: 15px !important;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 35%;
+    color: black;
+}
+.form form h2{
+    margin-bottom: 10px;
+    width: 85%;
+}
+.form input{
+    width: 85%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+}
+.form textarea{
+    resize: none;
+    width: 85%;
+    height: 150px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Righteous', cursive;
+}
+.form form div{
+    width: 85%;
+}
+.form button{
+    width: 10vw;
+    height: 3vw;
+    font-size: 20px;
+    background-color: rgb(86, 153, 253);
+    font-family: 'Righteous', cursive;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.696);
+    transition-duration: 0.1s;
+}
+.form button:hover{
+    background-color: rgb(61, 112, 188);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.109);
+}
+.form .answer{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    align-content: baseline;
+}
+.form .answer img{
+    width: 20%;
+    align-self: baseline;
+    justify-self: baseline;
+    min-height: max-content;
+}
+.skills .line2{
+    height: 6.3vw;
+    margin-left: 5.6vw;
+}
+.skills .conteiner{
+    width: 10.5vw;
+    height: 10.5vw;
+    min-width: 10.5vw;
+    min-height: 10.5vw;
+    margin-left: 0.4vw;
+}
+.skills p, .studies p{
+    transition-duration: 0.5s;
+}
+
+.skills .hex_border:hover p{
+    font-size: 28px;
+}
+.studies .hex_border:hover p{
+    font-size: 50px;
+}
+.skill_btn{
+    width: 60%;
+}
+.studies .conteiner{
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+}
+.des{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: min-content;
+}
+.des h2, .des h3, .des p{
+    width: 70%;
+}
+.des h2{
+    font-size: 50px;
+    margin: 0;
+}
+.des h3{
+    font-size: 30px;
+    margin: 0;
+}
+.des p{
+    font-size: 18px;
+    margin: 0;
+}
+.text{
+    width: 50%;
+}
+.text h1{
+    font-size: 65px;
+    margin-bottom: 0;
+}
+.text p, .text a{
+    font-size: 25px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+.home .imgs{
+    width: 50%;
+}
+.home .imgs img{
+    width: 100%;
+}
+.studies{
+    justify-content: center;
+}
+.studies .conteiner{
+    width: 15vw;
+    height: 15vw;
+    min-width: 15vw;
+    min-height: 15vw;
+}
+.studies .conteiner p{
+    font-size: 40px;
+}
+.ivkhk{
+    flex-direction: column;
+}
+.ivkhk .line2{
+    margin-left: 10.2vw;
+    height: 11vw;
+}
+.ivkhk .conteiner{
+    width: 20vw;
+    height: 20vw;
+    min-width: 20vw;
+    min-height: 20vw;
+    margin-left: 0.4vw;
+}
+.ivkhk p{
+    font-size: 45px;
+    transition-duration: 0.5s;
+}
+.ivkhk .hex_border:hover p{
+    font-size: 55px;
+}
+.course h2{
+    font-size: 50px;
+    width: 100%;
+    margin: 0;
+}
+.course .line2{
+    margin-left: 7.7vw;
+    height: 8vw;
+}
+.course .conteiner{
+    width: 15vw;
+    height: 15vw;
+    min-height: 15vw;
+    min-height: 15vw;
+    margin-left: 0.4vw;
+}
+.course p{
+    font-size: 30px;
+    transition-duration: 0.5s;
+}
+.course .hex:hover p{
+    font-size: 35px;
+}
+.add .line2{
+    margin-left: 6.2vw;
+    height: 6.8vw;
+}
+.add .conteiner{
+    width: 12vw;
+    height: 12vw;
+    min-height: 12vw;
+    min-height: 12vw;
+    margin-left: 0.4vw;
+}
+.add p{
+    font-size: 30px;
+    transition-duration: 0.5s;
+}
+.add .hex:hover p{
+    font-size: 35px;
+}
+.subject .header{
+    width: 100%;
+    margin-bottom: 2vw;
+}
+.subject .header h2{
+    font-size: 43px;
+    margin: 0;
+}
+.subject > h3{
+    font-size: 35px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.subject .header p{
+    font-size: 23px;
+    margin: 0;
+}
+.subject .btns{
+    display: flex;
+}
+.subject .btns .conteiner{
+   width: 8vw;
+   height: 8vw;
+   min-width: 8vw;
+   height: 8vw;
+}
+.subject .line2{
+    height: 7vw;
+    margin-left: 6.2vw;
+}
+.subject .conteiner{
+    width: 12vw;
+    height: 12vw;
+    min-width: 12vw;
+    height: 12vw;
+    margin-right: 0.4vw;
+}
+.subject .hex p{
+    font-size: 25px;
+    transition-duration: 0.5s;
+}
+.subject .hex:hover p{
+    font-size: 30px;
+}
+.subject .materials{
+    width: 100%;
+}
+.subject section{
+    margin-bottom: 2vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.subject section h3{
+    font-size: 30px;
+    margin: 0;
+    width: 100%;
+}
+.subject section p{
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 1vw;
+    width: 100%;
+}
+.subject .game{
+    overflow: hidden;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.subject .horizontal{
+    padding-top: 47%;
+}
+.subject .horizontal iframe{
+    width: 80%;
+    height: 100%;
+}
+.subject .vertical{
+    padding-top: 62%;
+}
+.subject .vertical iframe{
+    width: 42%;
+    height: 100%;
+}
+.subject .game iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+.subject .game p{
+    cursor: pointer;
+}
+.subject .game .buttons{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.subject section .file{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1vw;
+    flex-grow: 1;
+}
+.subject .file img{
+    width: 48%;
+}
+.subject .file a{
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: whitesmoke;
+    width: auto;
+}
+.subject .file > div{
+    width: 47%;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-bottom: 0px;
+}
+.subject .file > div h3{
+    color: black;
+    margin-left: 1vw;
+}
+.subject .file audio {
+     width: 30vw;
+}
+.subject .file audio::-webkit-media-controls-current-time-display, .subject .file audio::-webkit-media-controls-time-remaining-display{
+    display: none;
+}
+.subject section .imgs{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.subject section  .imgs > a{
+    width: fit-content;
+    max-width: 48%;
+}
+.subject .imgs a img{
+    max-width: 100%;
+    max-height: 75vh;
+}
