@@ -1,14 +1,29 @@
 $(document).ready(function () {
-    $(".main_btn").click(function (e) { 
+    main_btn(".main_btn")
+});
+function main_btn(obj) {
+    $(obj).click(function (e) { 
         e.preventDefault();
-        let button = this
+        let btn = this
         $.ajax({
             type: "post",
             url: "/fragment",
-            data: {page:$(button).attr("page_name")},
+            data: {page:$(btn).attr("page_name")},
             dataType: "html",
             success: function (response) {
                 $("main").toggleClass("slideUp");
+                if( $(btn).attr("page_name") != "MiFista" && $(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] == undefined){
+                    let div = document.createElement("div")
+                    let text_btn = `<span>/</span> <p class="path_btn" type="menu" page_name="`+$(btn).attr("page_name")+`">`+$(btn).text()+`</p>`
+                    $(div).html(text_btn);
+                    main_btn($(div).find(".path_btn")[0])
+                    $(".path .btns").append(div);
+                    sessionStorage.setItem("path",$(btn).attr("page_name"))
+                }
+                if($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] != undefined){
+                    $($($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0]).parent()).nextAll('div').remove();
+                    sessionStorage.setItem("path",$(btn).attr("page_name"))
+                }
                 let element = document.getElementById("up")
                 element.scrollIntoView()
                 setTimeout(() => {
@@ -19,4 +34,4 @@ $(document).ready(function () {
             }
         });
     });
-});
+  }

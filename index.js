@@ -4,21 +4,36 @@ var app = express();
 
 const hbs = require('nodemailer-express-handlebars')
 const nodemailer = require('nodemailer')
-const path = require('path')
 
+const cookieParser = require("cookie-parser");
+const sessions = require('express-session');
+// creating 24 hours from milliseconds
+const oneDay = 1000 * 60 * 60 * 24;
 
+//session middleware
+app.use(sessions({
+    secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+    saveUninitialized:true,
+    cookie: { maxAge: oneDay },
+    resave: false
+}));
 // ===================settings============================
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(cookieParser());
 const bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: "4000mb"}));
 app.use(bodyParser.urlencoded({limit: "4000mb", extended: true, parameterLimit:5000000}));
 // ===================settings============================
 
+var session;
 app.get('/', async function(req, res){
+    session=req.session;
     res.render('pages/index');
 })
-
+app.get('*', function(req, res){
+    res.render('pages/error');
+})
 // ===========================send fragments==============================================
 app.post('/fragment', async function(req, res){
     res.send(res.render("fragments/"+req.body.page+".ejs"));

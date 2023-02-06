@@ -4,17 +4,29 @@ $(document).ready(function () {
         e.preventDefault();
         $(".tabs").toggle(200);
     });
-    $(".menu_btn").click(function (e) { 
+    menu_btn(".menu_btn")
+});
+function menu_btn(obj) {
+    $(obj).click(function (e) {
         e.preventDefault();
-        let button = this
+        let btn = this
         $.ajax({
             type: "post",
             url: "/fragment",
-            data: {page:$(button).attr("page_name")},
+            data: {page:$(btn).attr("page_name")},
             dataType: "html",
             success: function (response) {
                 $("main").toggleClass("slideUp");
-                let element = document.getElementById("up")
+                $(".path .btns").empty();
+                sessionStorage.setItem("path",$(btn).attr("page_name"))
+                if( $(btn).attr("page_name") != "home" && $(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] == undefined){
+                    let div = document.createElement("div")
+                    let text_btn = `<p class="path_btn" type="menu" page_name="`+$(btn).attr("page_name")+`">`+$(btn).text()+`</p>`
+                    $(div).html(text_btn);
+                    menu_btn($(div).find(".path_btn")[0])
+                    $(".path .btns").append(div);
+                }
+                element = document.getElementById("up")
                 element.scrollIntoView()
                 setTimeout(() => {
                     $("main").empty();
@@ -24,4 +36,4 @@ $(document).ready(function () {
             }
         });
     });
-});
+}
