@@ -14,16 +14,16 @@ function main_btn(obj) {
                 $("main").toggleClass("slideUp");
                 if( $(btn).attr("page_name") != "MiFista" && $(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] == undefined){
                     let div = document.createElement("div")
-                    let text_btn = `<span>/</span> <p class="path_btn" type="menu" page_name="`+$(btn).attr("page_name")+`">`+$(btn).text()+`</p>`
+                    let text_btn = `<span>/</span> <p class="path_btn" page_name="`+$(btn).attr("page_name")+`">`+$(btn).text()+`</p>`
                     $(div).html(text_btn);
                     main_btn($(div).find(".path_btn")[0])
                     $(".path .btns").append(div);
-                    sessionStorage.setItem("path",$(btn).attr("page_name"))
                 }
                 if($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] != undefined){
                     $($($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0]).parent()).nextAll('div').remove();
-                    sessionStorage.setItem("path",$(btn).attr("page_name"))
                 }
+                sessionStorage.setItem("page",$(btn).attr("page_name"))
+                sessionStorage.setItem("path",$(".path .btns").html())
                 let element = document.getElementById("up")
                 element.scrollIntoView()
                 setTimeout(() => {

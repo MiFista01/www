@@ -22,7 +22,7 @@ header{
     width: 68%;
     background-color: rgb(8, 8, 8);
     clip-path: polygon(0%0%,100%0%,100%70%,55%70%,50%100%,45%70%,0%70%);
-    height: 70px;
+    height: 10vh;
     display: flex;
     justify-content: center;
     font-family: 'Bebas Neue', cursive;
@@ -55,8 +55,12 @@ header h1:hover,header h2:hover{
     background-color: rgb(0, 0, 0);
     color: whitesmoke;
 }
-.path{
+.side{
     width: 15%;
+    margin-top: -10vh;
+}
+.path{
+    width: 100%;
     height: fit-content;
     display: flex;
     padding: 10px;
@@ -65,9 +69,9 @@ header h1:hover,header h2:hover{
     align-items: start;
     background-color: whitesmoke;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    position: sticky;
+    top: 95vh;
+    z-index: 1;
     color: black;
 }
 .path > div{
@@ -100,6 +104,7 @@ header h1:hover,header h2:hover{
     justify-content: space-around;
     flex-grow: 1;
     color: whitesmoke;
+    min-height: 90vh;
 }
 .line1, .line2{
     width: 100%;
@@ -396,6 +401,9 @@ main{
 .add .hex:hover p{
     font-size: 35px;
 }
+.subject > h3{
+    margin: 0;
+}
 .subject .header{
     width: 100%;
     margin-bottom: 2vw;
@@ -553,4 +561,51 @@ main{
 .subject .imgs a img{
     max-width: 100%;
     max-height: 75vh;
+}
+footer{
+    width: 100%;
+    background-image: url("../imgs/footer/back.png");
+    background-size: cover;
+    background-position: top;
+    padding-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 13%;
+    padding-top: 55px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.footer_top{
+    width: 100%;
+}
+.footer_top h2{
+    font-size: 30px;
+}
+footer .text{
+    width: 40%;
+}
+footer .text h4{
+    margin: 0;
+}
+footer .text p{
+    color: black;
+    font-size: 18px;
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0px 20px;
+}
+footer ul p{
+    margin: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+footer .media{
+    display: flex;
+}
+footer ul img{
+    width: 2vw;
 }

@@ -2,10 +2,10 @@
     color: black;
     font-size: 20px;
     position: sticky;
-    top: -0px;
+    top: 0px;
     left: 0px;
     margin-top: -4vw;
-    width: 15%;
+    width: 100%;
     height: min-content;
     z-index: 10;
 }

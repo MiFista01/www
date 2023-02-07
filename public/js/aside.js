@@ -18,7 +18,6 @@ function menu_btn(obj) {
             success: function (response) {
                 $("main").toggleClass("slideUp");
                 $(".path .btns").empty();
-                sessionStorage.setItem("path",$(btn).attr("page_name"))
                 if( $(btn).attr("page_name") != "home" && $(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] == undefined){
                     let div = document.createElement("div")
                     let text_btn = `<p class="path_btn" type="menu" page_name="`+$(btn).attr("page_name")+`">`+$(btn).text()+`</p>`
@@ -26,6 +25,8 @@ function menu_btn(obj) {
                     menu_btn($(div).find(".path_btn")[0])
                     $(".path .btns").append(div);
                 }
+                sessionStorage.setItem("page",$(btn).attr("page_name"))
+                sessionStorage.setItem("path",$(".path .btns").html())
                 element = document.getElementById("up")
                 element.scrollIntoView()
                 setTimeout(() => {

@@ -10,17 +10,33 @@
                 <%- include('../partials/header'); %>
             </header>
             <div class="content">
-                <%- include('../partials/left_aside'); %>
-                <div class="path">
-                    <h3>Path:</h3>
-                    <div class="btns"></div>
-                </div>
+                <aside class="side">
+                    <%- include('../partials/left_aside'); %>
+                    <div class="path">
+                        <h3>Path:</h3>
+                        <div class="btns"></div>
+                    </div>
+                </aside>
                 <main></main>
-                <aside class="right_aside"></aside>
+                <aside class="side">
+                    <div class="options">
+                        <div class="anchors">
+                            <img src="imgs/background/up.png" alt="" class="up">
+                            <img src="imgs/background/down.png" alt="" class="down">
+                        </div>
+                        <div class="colors">
+                            <h4 id="btn_color">Background color</h4>
+                            <div class="opt">
+                                <p class="color" id="1">Blue</p>
+                                <p class="color" id="2">Red</p>
+                                <p class="color" id="3">Yellow</p>
+                                <p class="color" id="4">Green</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <footer id="down">
-
-            </footer>
+            <%- include('../partials/footer'); %>
         </div>
     </body>
 </html>
