@@ -25,7 +25,7 @@ $(document).ready(function () {
     $(left).insertBefore(body);
     $(right).insertAfter(body);
 
-    $(".slider #left").click(function (e) {
+    $(".slider #right").click(function (e) {
         e.preventDefault();
         let btn = this
         if($($(btn).parent()).attr("slide") == undefined || $($(btn).parent()).attr("slide") == "on"){
@@ -34,15 +34,15 @@ $(document).ready(function () {
                 margin /= 0.98
             }
             margin += "%"
-            $($($(btn).next()).find(`[order='0']`)).animate({"margin-left":margin},+$($(btn).parent()).attr("time"),()=>{
+            $($($(btn).prev()).find(`[order='0']`)).animate({"margin-left":margin},+$($(btn).parent()).attr("time"),()=>{
                 for (i = 0; i < $($(btn).parent()).attr("scroll"); i++){
-                    for (j of $($(btn).next()).children()){
+                    for (j of $($(btn).prev()).children()){
                         let order =  $(j).attr("order");
                         order --
                         if (order < 0){
-                            order = $($(btn).next()).children().length + order
+                            order = $($(btn).prev()).children().length + order
                         }
-                        $($($(btn).next()).find(`[order='0']`)).css("margin-left",0)
+                        $($($(btn).prev()).find(`[order='0']`)).css("margin-left",0)
                         $(j).attr("order", order);
                         $(j).css("order", order);
                     }
@@ -52,12 +52,12 @@ $(document).ready(function () {
         }
         $($(btn).parent()).attr("slide","off")
     });
-    $(".slider #right").click(function (e) { 
+    $(".slider #left").click(function (e) { 
         e.preventDefault();
         let btn = this
         if($($(btn).parent()).attr("slide") == undefined || $($(btn).parent()).attr("slide") == "on"){
             for (i = 0; i < $($(btn).parent()).attr("scroll"); i++){
-                let obj = $($($(btn).prev()).find("[order='"+($($(btn).prev()).children().length-(i+1))+"']"))
+                let obj = $($($(btn).next()).find("[order='"+($($(btn).next()).children().length-(i+1))+"']"))
                 $(obj).css("order", -(i+1));
                 $(obj).attr("order", -(i+1));
                 if((i+1) == $($(btn).parent()).attr("scroll")){
@@ -70,9 +70,9 @@ $(document).ready(function () {
                     $(obj).css("margin-left", margin);
                 }
             }
-            $($($(btn).prev()).find("[order='-"+($($(btn).parent()).attr("scroll"))+"']")).animate({"margin-left":0},+$($(btn).parent()).attr("time"),()=>{
+            $($($(btn).next()).find("[order='-"+($($(btn).parent()).attr("scroll"))+"']")).animate({"margin-left":0},+$($(btn).parent()).attr("time"),()=>{
                 for (i = 0; i < $($(btn).parent()).attr("scroll"); i++){
-                    for (j of $($(btn).prev()).children()){
+                    for (j of $($(btn).next()).children()){
                         let order =  $(j).attr("order");
                         order ++;
                         $(j).attr("order", order);
