@@ -14,7 +14,7 @@
     min-height: 100%;
     width: 100%;
     margin: 0;
-    font-size: 23px;
+    font-size: 5vmin;
     background-color: rgb(181, 181, 181);
     color: rgb(0, 0, 0);
     z-index: 0;
@@ -123,4 +123,7 @@
     background-image: url(../imgs/404.png);
     background-size: cover;
     background-position: center;
+}
+.reverse{
+    flex-direction: column-reverse !important;
 }

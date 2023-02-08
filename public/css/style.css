@@ -21,7 +21,7 @@ body{
 header{
     width: 68%;
     clip-path: polygon(0%0%,100%0%,100%70%,55%70%,50%100%,45%70%,0%70%);
-    height: 7vmin;
+    height: 10vmin;
     display: flex;
     justify-content: center;
     font-family: 'Bebas Neue', cursive;
@@ -32,12 +32,13 @@ header{
 }
 header h1{
     margin: 0;
-    font-size: 4vmin;
+    font-size: 5vmin;
     cursor: pointer;
-    padding-top: 1vmin;
+    padding-top: 2vmin;
     width: 15%;
     text-align: center;
-    transition: color, background 0.5s;
+    transition: 0.5s;
+    transition-property: color background;
     user-select: none;
 }
 header h2{
@@ -45,9 +46,10 @@ header h2{
     width: 12%;
     text-align: center;
     cursor: pointer;
-    transition: color, background 0.5s;
-    font-size: 2.5vmin;
-    padding-top: 10px;
+    padding-top: 1.5vmin;
+    transition: 0.5s;
+    transition-property: color background;
+    font-size: 4vmin;
     user-select: none;
 }
 header h1:hover,header h2:hover{
@@ -78,7 +80,7 @@ header h1:hover,header h2:hover{
     z-index: 1;
     color: black;
     overflow-y: scroll;
-    font-size: 1.5vmin;
+    font-size: 2vmin;
 }
 .path > div{
     width: fit-content;
@@ -137,6 +139,9 @@ main{
     width: 100%;
     flex-wrap: wrap;
 }
+.about .text p{
+    font-size: 3vmin;
+}
 .about .imgs{
     width: 50%;
 }
@@ -150,11 +155,16 @@ main{
 }
 .form h1{
     margin: 0;
+    font-size: 7vmin !important;
 }
 .form ul{
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 .form li{
     width: 100%;
@@ -180,10 +190,10 @@ main{
     margin: 0;
 }
 .form h2{
-    font-size: 2.5vmin !important;
+    font-size: 3vmin ;
 }
 .form p, .form a{
-    font-size: 2vmin !important;
+    font-size: 2.5vmin !important;
 }
 .form form{
     display: flex;
@@ -198,22 +208,26 @@ main{
 .form form h2{
     margin-bottom: 10px ;
     width: 85%;
-    font-size: 4vmin !important;
+    font-size: 5vmin;
 }
 .form input{
     width: 85%;
-    height: 3vmin;
+    height: 5vmin;
     margin-bottom: 10px;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     font-family: 'Righteous', cursive;
 }
 .form textarea{
     resize: none;
     width: 85%;
-    height: 15vmin;
-    font-size: 1.8vmin;
+    height: 20vmin;
+    font-size: 2.2vmin;
     margin-bottom: 10px;
     font-family: 'Righteous', cursive;
+}
+.form form{
+    padding: 10px;
+    box-sizing: border-box;
 }
 .form form div{
     width: 85%;
@@ -248,6 +262,10 @@ main{
     justify-self: baseline;
     min-height: max-content;
 }
+.skills h1{
+    font-size: 7vmin;
+    margin-bottom: 0;
+}
 .skills .line2{
     height: 6.3vw;
     margin-left: 5.6vw;
@@ -263,13 +281,16 @@ main{
     transition-duration: 0.5s;
 }
 .skills .hex_border{
-    font-size: 2.5vmin;
+    font-size: 2.8vmin;
 }
 .skills .hex_border:hover p{
-    font-size: 3vmin;
+    font-size: 3.3vmin;
+}
+.studies .hex_border{
+    font-size: 5vmin;
 }
 .studies .hex_border:hover p{
-    font-size: 50px;
+    font-size: 6vmin;
 }
 .skill_btn{
     width: 60%;
@@ -292,26 +313,28 @@ main{
     width: 70%;
 }
 .des h2{
-    font-size: 50px;
+    font-size: 5.5vmin;
     margin: 0;
 }
 .des h3{
-    font-size: 30px;
+    font-size: 3.8vmin;
     margin: 0;
 }
 .des p{
-    font-size: 18px;
+    font-size: 2.8vmin;
     margin: 0;
 }
 .text{
     width: 50%;
+    padding: 0px 1.5vmin;
+    box-sizing: border-box;
 }
 .text h1{
-    font-size: 65px;
+    font-size: 8.5vmin;
     margin-bottom: 0;
 }
 .text p, .text a{
-    font-size: 25px;
+    font-size: 4vmin;
     margin: 0;
     color: white;
     text-decoration: none;
@@ -331,9 +354,6 @@ main{
     min-width: 15vw;
     min-height: 15vw;
 }
-.studies .conteiner p{
-    font-size: 40px;
-}
 .ivkhk{
     flex-direction: column;
 }
@@ -349,14 +369,14 @@ main{
     margin-left: 0.4vw;
 }
 .ivkhk p{
-    font-size: 45px;
+    font-size: 7vmin;
     transition-duration: 0.5s;
 }
 .ivkhk .hex_border:hover p{
-    font-size: 55px;
+    font-size: 9vmin;
 }
 .course h2{
-    font-size: 50px;
+    font-size: 7vmin;
     width: 100%;
     margin: 0;
 }
@@ -372,11 +392,11 @@ main{
     margin-left: 0.4vw;
 }
 .course p{
-    font-size: 30px;
+    font-size: 4vmin;
     transition-duration: 0.5s;
 }
 .course .hex:hover p{
-    font-size: 35px;
+    font-size: 5vmin;
 }
 .add .line2{
     margin-left: 6.2vw;
@@ -389,12 +409,8 @@ main{
     min-height: 12vw;
     margin-left: 0.4vw;
 }
-.add p{
-    font-size: 30px;
-    transition-duration: 0.5s;
-}
 .add .hex:hover p{
-    font-size: 35px;
+    font-size: calc(5vmax/5vmin) !important;
 }
 .subject > h3{
     margin: 0;
@@ -404,16 +420,16 @@ main{
     margin-bottom: 2vw;
 }
 .subject .header h2{
-    font-size: 43px;
+    font-size: 6vmin;
     margin: 0;
 }
 .subject > h3{
-    font-size: 35px;
+    font-size: 5vmin;
     margin-bottom: 0px;
     width: 100%;
 }
 .subject .header p{
-    font-size: 23px;
+    font-size: 3vmin;
     margin: 0;
 }
 .subject .btns{
@@ -437,11 +453,11 @@ main{
     margin-right: 0.4vw;
 }
 .subject .hex p{
-    font-size: 25px;
+    font-size: 3.5vmin;
     transition-duration: 0.5s;
 }
 .subject .hex:hover p{
-    font-size: 30px;
+    font-size: 4.3vmin;
 }
 .subject .materials{
     width: 100%;
@@ -455,12 +471,12 @@ main{
     align-items: center;
 }
 .subject section h3{
-    font-size: 30px;
+    font-size: 4.5vmin;
     margin: 0;
     width: 100%;
 }
 .subject section p{
-    font-size: 25px;
+    font-size: 3vmin;
     margin: 0;
     margin-bottom: 1vw;
     width: 100%;
@@ -518,10 +534,10 @@ main{
     width: 48%;
 }
 .subject .file a{
-    padding: 10px 20px;
+    padding: 1.5vmin 4vmin;
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 3vmin;
     background-color: whitesmoke;
     width: auto;
 }
@@ -567,7 +583,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     padding: 0px 13%;
-    padding-top: 55px;
+    padding-top: 10vmin;
     padding-bottom: 10px;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -576,7 +592,8 @@ footer{
     width: 100%;
 }
 .footer_top h2{
-    font-size: 30px;
+    font-size: 4vmin;
+    margin: 0;
 }
 footer .text{
     width: 40%;
@@ -586,16 +603,16 @@ footer .text h4{
 }
 footer .text p{
     color: black;
-    font-size: 18px;
+    font-size: 2.5vmin;
 }
 footer ul{
     list-style: none;
     padding: 0;
-    margin: 0px 20px;
+    margin: 0px 2vmin;
 }
 footer ul p{
     margin: 0;
-    font-size: 15px;
+    font-size: 2vmin;
     cursor: pointer;
 }
 footer .media{
