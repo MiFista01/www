@@ -20,9 +20,8 @@ body{
 }
 header{
     width: 68%;
-    background-color: rgb(8, 8, 8);
     clip-path: polygon(0%0%,100%0%,100%70%,55%70%,50%100%,45%70%,0%70%);
-    height: 10vh;
+    height: 7vmin;
     display: flex;
     justify-content: center;
     font-family: 'Bebas Neue', cursive;
@@ -33,12 +32,12 @@ header{
 }
 header h1{
     margin: 0;
-    font-size: 40px;
+    font-size: 4vmin;
     cursor: pointer;
-    padding-top: 3px;
+    padding-top: 1vmin;
     width: 15%;
     text-align: center;
-    transition-duration: 0.5s;
+    transition: color, background 0.5s;
     user-select: none;
 }
 header h2{
@@ -46,8 +45,8 @@ header h2{
     width: 12%;
     text-align: center;
     cursor: pointer;
-    transition-duration: 0.5s;
-    font-size: 25px;
+    transition: color, background 0.5s;
+    font-size: 2.5vmin;
     padding-top: 10px;
     user-select: none;
 }
@@ -58,10 +57,15 @@ header h1:hover,header h2:hover{
 .side{
     width: 15%;
     margin-top: -10vh;
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .path{
     width: 100%;
-    height: fit-content;
     display: flex;
     padding: 10px;
     border-radius: 10px;
@@ -70,16 +74,17 @@ header h1:hover,header h2:hover{
     background-color: whitesmoke;
     box-sizing: border-box;
     position: sticky;
-    top: 95vh;
+    bottom: 0;
     z-index: 1;
     color: black;
+    overflow-y: scroll;
+    font-size: 1.5vmin;
 }
 .path > div{
     width: fit-content;
 }
 .path h3{
     margin: 0;
-    font-size: 14px;
     user-select: none;
 }
 .path .btns{
@@ -92,7 +97,6 @@ header h1:hover,header h2:hover{
     align-items: center;
 }
 .path p{
-    font-size: 14px;
     cursor: pointer;
     margin: 0;
     color: black;
@@ -104,7 +108,7 @@ header h1:hover,header h2:hover{
     justify-content: space-around;
     flex-grow: 1;
     color: whitesmoke;
-    min-height: 90vh;
+    min-height: 95vh;
 }
 .line1, .line2{
     width: 100%;
@@ -120,22 +124,11 @@ main{
     align-items: flex-start;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0.5vmin rgba(0, 0, 0, 0.1);
 }
 
 .conteiner .message{
-    position: absolute;
-    color: black;
-    top: 100%;
-    width: 100%;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 2;
     display: none;
-    transition-duration: 0.5s;
-    padding: 5px;
-    box-sizing: border-box;
 }
 .home, .about, .form, .skills, .studies, .ivkhk, .course, .subject, .add{
     display: flex;
@@ -149,10 +142,10 @@ main{
 }
 .form{
     justify-content: center;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.01);
-    padding: 20px;
+    box-shadow: 0px 0px 1vmin rgba(255, 255, 255, 0.01);
+    padding: 2vmin;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 1vmin;
     background-color: rgba(255, 255, 255, 0.01);
 }
 .form h1{
@@ -168,7 +161,7 @@ main{
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1vmin;
 }
 .form li .img{
     width: 3vw;
@@ -185,13 +178,12 @@ main{
 }
 .form p, .form a, .form h2{
     margin: 0;
-    margin-top: 10px;
 }
 .form h2{
-    font-size: 20px !important;
+    font-size: 2.5vmin !important;
 }
 .form p, .form a{
-    font-size: 15px !important;
+    font-size: 2vmin !important;
 }
 .form form{
     display: flex;
@@ -204,21 +196,22 @@ main{
     color: black;
 }
 .form form h2{
-    margin-bottom: 10px;
+    margin-bottom: 10px ;
     width: 85%;
+    font-size: 4vmin !important;
 }
 .form input{
     width: 85%;
-    height: 30px;
+    height: 3vmin;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 2vmin;
     font-family: 'Righteous', cursive;
 }
 .form textarea{
     resize: none;
     width: 85%;
-    height: 150px;
-    font-size: 20px;
+    height: 15vmin;
+    font-size: 1.8vmin;
     margin-bottom: 10px;
     font-family: 'Righteous', cursive;
 }
@@ -228,7 +221,7 @@ main{
 .form button{
     width: 10vw;
     height: 3vw;
-    font-size: 20px;
+    font-size: 2vmin;
     background-color: rgb(86, 153, 253);
     font-family: 'Righteous', cursive;
     color: white;
@@ -269,9 +262,11 @@ main{
 .skills p, .studies p{
     transition-duration: 0.5s;
 }
-
+.skills .hex_border{
+    font-size: 2.5vmin;
+}
 .skills .hex_border:hover p{
-    font-size: 28px;
+    font-size: 3vmin;
 }
 .studies .hex_border:hover p{
     font-size: 50px;
