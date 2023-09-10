@@ -1,7 +1,8 @@
 $(document).ready(function () {
     if(sessionStorage.getItem("page") == null){
         sessionStorage.setItem("page","home")
-    }$.ajax({
+    }
+    $.ajax({ //get pagefrom session storage
         type: "post",
         url: "/fragment",
         data: {page:sessionStorage.getItem("page")},
@@ -11,7 +12,7 @@ $(document).ready(function () {
             $("main").html(response);
         }
     });
-    if(sessionStorage.getItem("path") != null){
+    if(sessionStorage.getItem("path") != null){ //insert in div all paths
         let btns = document.createElement("div")
         $(btns).html(sessionStorage.getItem("path"));
         for (i of $(btns).children()){
@@ -32,22 +33,20 @@ $(document).ready(function () {
                             main_btn($(div).find(".path_btn")[0])
                             $(".path .btns").append(div);
                         }
-                        if($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] != undefined){
-                            $($($(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0]).parent()).nextAll('div').remove();
-                        }
-                        sessionStorage.setItem("page",$(btn).attr("page_name"))
-                        sessionStorage.setItem("path",$(".path .btns").html())
-                        let element = document.getElementById("up")
-                        element.scrollIntoView()
-                        setTimeout(() => {
-                            $("main").empty();
-                            $("main").html(response);
-                            $("main").toggleClass("slideUp");
-                        }, 800);
                     }
                 });
             });
             $(".path .btns").append(i);
         }
     };
+    $(document).scroll(function () { 
+        sessionStorage.setItem("scroll",$(document).scrollTop())
+    });
+    if (sessionStorage.getItem("scroll") != null){
+        window.scroll({
+            top: sessionStorage.getItem("scroll")+'px',
+            left: 0+'px',
+            behavior: 'auto'
+          });
+    }
 });

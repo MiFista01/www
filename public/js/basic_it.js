@@ -1,13 +1,13 @@
 $(document).ready(function () {
     let defense = false
-    $(".options_btn").click(function (e) { 
+    $(".options_btn").click(function (e) { //btns for parts in page
         e.preventDefault();
         if (!defense){
             let button = this
             $.ajax({
                 type: "post",
                 url: "/fragment",
-                data: {page:$(button).attr("page_name")},
+                data: {page:$(button).attr("page_name")}, //get name of fragment
                 dataType: "html",
                 success: function (response) {
                     defense = true

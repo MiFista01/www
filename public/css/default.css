@@ -127,3 +127,12 @@
 .reverse{
     flex-direction: column-reverse !important;
 }
+.pres{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pres iframe{
+    width: 80%;
+    height: 70vh;
+}

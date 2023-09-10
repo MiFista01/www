@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("main .hex").click(function (e) { 
+    $("main .hex").click(function (e) { //show text
         e.preventDefault();
         let btn = this
         $(".des h3").text($(btn).text());

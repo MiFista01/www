@@ -1,6 +1,8 @@
 
 var express = require("express");
 var app = express();
+var fs = require("fs")
+var path = require('path')
 
 const hbs = require('nodemailer-express-handlebars')
 const nodemailer = require('nodemailer')
@@ -51,17 +53,17 @@ app.post('/message', async function(req, res){
     // point to the template folder
     const handlebarOptions = {
         viewEngine: {
-            partialsDir: path.resolve('./views/handlebars/'),
+            partialsDir: path.resolve('views/handlebars/'),
             defaultLayout: false,
         },
-        viewPath: path.resolve('./views/handlebars/'),
+        viewPath: path.resolve('views/handlebars/'),
     };
 
     // use a template file with nodemailer
     transporter.use('compile', hbs(handlebarOptions))
 
     var mailOptions = {
-        from: '"User" <'+req.body.user+'>', // sender address
+        from: 'mifis0site@gmail.com', // sender address
         to: 'mifis0site@gmail.com', // list of receivers
         subject: 'Contact form',
         template: 'email', // the name of the template file i.e email.handlebars

@@ -5,12 +5,12 @@ function main_btn(obj) {
     $(obj).click(function (e) { 
         e.preventDefault();
         let btn = this
-        if(sessionStorage.getItem("page") !=$(btn).attr("page_name")){
+        if(sessionStorage.getItem("page") !=$(btn).attr("page_name")){ //ckeck page name and btn attribute
             $.ajax({
                 type: "post",
                 url: "/fragment",
                 data: {page:$(btn).attr("page_name")},
-                dataType: "html",
+                dataType: "html", //get the HTML format of the sent page
                 success: function (response) {
                     $("main").toggleClass("slideUp");
                     if( $(btn).attr("page_name") != "MiFista" && $(".path .btns").find("[page_name='"+$(btn).attr("page_name")+"']")[0] == undefined){
